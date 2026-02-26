@@ -131,3 +131,9 @@ Direct, Booking.com, Expedia, Agoda, Traveloka, Tiket.com, PegiPegi, Trip.com, A
 | Diamond | 50,000 | Butler + airport transfer |
 
 ---
+
+## 📄 License
+
+MIT License
+
+---
