@@ -1,4 +1,4 @@
-content = """# 🏨 NexStay - Premium Property Reservation Platform
+# 🏨 NexStay - Premium Property Reservation Platform
 
 A full-stack property reservation platform inspired by DoubleTree by Hilton, built with Django REST Framework and Next.js.
 
@@ -131,10 +131,3 @@ Direct, Booking.com, Expedia, Agoda, Traveloka, Tiket.com, PegiPegi, Trip.com, A
 | Diamond | 50,000 | Butler + airport transfer |
 
 ---
-
-## 📄 License
-
-MIT License
-
----
-"""
