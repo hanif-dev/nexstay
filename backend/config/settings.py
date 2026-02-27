@@ -30,16 +30,17 @@ if CODESPACE_NAME:
     ALLOWED_HOSTS += [f"{CODESPACE_NAME}-3000.app.github.dev", f"{CODESPACE_NAME}-8000.app.github.dev"]
 else:
     CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://supreme-space-happiness-jxpwjgxwpjh5w5q-3000.app.github.dev",
+        "http://localhost:3000",
+        "https://nexstay-8yac7bi08-hanif-devs-projects.vercel.app",
+        "https://nexstay.vercel.app",
     ]
 
     CORS_ALLOW_CREDENTIALS = True
 
     CSRF_TRUSTED_ORIGINS = [
         "http://localhost:3000",
-        "https://supreme-space-happiness-jxpwjgxwpjh5w5q-3000.app.github.dev",
-        "https://supreme-space-happiness-jxpwjgxwpjh5w5q-8000.app.github.dev",
+        "https://nexstay-8yac7bi08-hanif-devs-projects.vercel.app",
+        "https://nexstay.vercel.app",
     ]
 
 
