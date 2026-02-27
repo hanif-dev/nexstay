@@ -33,6 +33,7 @@ else:
         "http://localhost:3000",
         "https://nexstay-8yac7bi08-hanif-devs-projects.vercel.app",
         "https://nexstay.vercel.app",
+        ""https://nexstay-qp8schwd2-hanif-devs-projects.vercel.app"",
     ]
 
     CORS_ALLOW_CREDENTIALS = True
@@ -41,6 +42,7 @@ else:
         "http://localhost:3000",
         "https://nexstay-8yac7bi08-hanif-devs-projects.vercel.app",
         "https://nexstay.vercel.app",
+        ""https://nexstay-qp8schwd2-hanif-devs-projects.vercel.app"",
     ]
 
 
