@@ -33,7 +33,6 @@ else:
         "http://localhost:3000",
         "https://nexstay-8yac7bi08-hanif-devs-projects.vercel.app",
         "https://nexstay.vercel.app",
-        ""https://nexstay-qp8schwd2-hanif-devs-projects.vercel.app"",
     ]
 
     CORS_ALLOW_CREDENTIALS = True
@@ -42,7 +41,6 @@ else:
         "http://localhost:3000",
         "https://nexstay-8yac7bi08-hanif-devs-projects.vercel.app",
         "https://nexstay.vercel.app",
-        ""https://nexstay-qp8schwd2-hanif-devs-projects.vercel.app"",
     ]
 
 
@@ -150,12 +148,9 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
-# ===== CORS ====
-=
+# ===== CORS =====
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_ALL_ORIGINS = True
-
- = ['accept', 'authorization', 'content-type', 'origin', 'x-csrftoken', 'x-requested-with']
+CORS_ALLOW_HEADERS = ['accept', 'authorization', 'content-type', 'origin', 'x-csrftoken', 'x-requested-with']
 
 # ===== AXES (Brute Force Protection) =====
 AXES_FAILURE_LIMIT = 5
