@@ -198,7 +198,15 @@ if os.environ.get('DATABASE_URL'):
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
+ALLOWED_HOSTS = os.environ.get(
+    'ALLOWED_HOSTS',
+    'overflowing-comfort-production.up.railway.app,localhost,127.0.0.1'
+).split(',')
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://overflowing-comfort-production.up.railway.app',
+]
+
 SECRET_KEY = os.environ.get('SECRET_KEY', SECRET_KEY)
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
@@ -207,18 +215,6 @@ MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Production settings
-import os
-import dj_database_url
-
-if os.environ.get('DATABASE_URL'):
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
-SECRET_KEY = os.environ.get('SECRET_KEY', SECRET_KEY)
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 # Whitenoise untuk static files
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
