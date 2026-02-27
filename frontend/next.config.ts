@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    turbo: {
+      ...(isGithubPages && { enabled: false }),
+    },
+  },
 };
 
 export default nextConfig;
