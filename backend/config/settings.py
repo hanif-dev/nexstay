@@ -150,9 +150,12 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
-# ===== CORS =====
+# ===== CORS ====
+=
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = ['accept', 'authorization', 'content-type', 'origin', 'x-csrftoken', 'x-requested-with']
+CORS_ALLOW_ALL_ORIGINS = True
+
+ = ['accept', 'authorization', 'content-type', 'origin', 'x-csrftoken', 'x-requested-with']
 
 # ===== AXES (Brute Force Protection) =====
 AXES_FAILURE_LIMIT = 5
