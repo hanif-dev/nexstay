@@ -1,20 +1,9 @@
 import PropertyDetail from './PropertyDetail';
 
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams() {
-  try {
-    const res = await fetch(
-      process.env.NEXT_PUBLIC_API_URL + '/api/properties/units/'
-    );
-    const data = await res.json();
-    const results = Array.isArray(data) ? data : data.results || [];
-    return results.map((p: { slug: string }) => ({ slug: p.slug }));
-  } catch {
-    return [
-      { slug: 'deluxe-room' },
-      { slug: 'superior-suite' },
-      { slug: 'presidential-suite' },
-    ];
-  }
+  return [];
 }
 
 export default async function PropertyDetailPage({
