@@ -3,7 +3,7 @@ import PropertyDetail from './PropertyDetail';
 export async function generateStaticParams() {
   try {
     const res = await fetch(
-      process.env.NEXT_PUBLIC_API_URL + '/api/properties/types/'
+      process.env.NEXT_PUBLIC_API_URL + '/api/properties/units/'
     );
     const data = await res.json();
     const results = Array.isArray(data) ? data : data.results || [];
@@ -17,10 +17,12 @@ export async function generateStaticParams() {
   }
 }
 
-export default function PropertyDetailPage({
+export default async function PropertyDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  return <PropertyDetail slug={params.slug} />;
+  const { slug } = await params;
+  return <PropertyDetail slug={slug} />;
 }
+
